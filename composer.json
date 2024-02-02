@@ -1,0 +1,19 @@
+{
+    "name": "hexlet/code",
+    "description": "",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "maid",
+            "email": "sonvsevolod0@gmail.com"
+        }
+    ],
+	"bin": [
+		"bin/brain-games"
+	],
+    "require": {}
+}
