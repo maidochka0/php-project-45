@@ -1,0 +1,14 @@
+<?php
+namespace Project1\Cli;
+
+require_once "/home/maid/project-1/vendor/autoload.php"; //загружается только локальная автозагрузка
+
+use function cli\line;
+use function cli\prompt;
+
+function userName()
+{
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
+    return $name;
+}
