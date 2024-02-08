@@ -4,13 +4,13 @@
 require_once("/home/maid/project-1/src/Cli.php");
 require_once("/home/maid/project-1/src/Engine.php");
 
-print_r("Welcome to the Brain Games!\n");
+\project1\Cli\welcome();
 $userName = \Project1\Cli\userName();
 print_r('Answer "yes" if the number is even, otherwise answer "no".');
 echo "\n";
 $countTrueAns = 0;
-$ansTask = 3;
-while ($countTrueAns < $ansTask) {
+$ansLimit = 3;
+while ($countTrueAns < $ansLimit) {
     $questNumb = rand(0, 100);
     if ($questNumb % 2 === 0) {
         $questAns = "yes";

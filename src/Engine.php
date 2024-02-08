@@ -2,7 +2,7 @@
 
 namespace Project1\Engine;
 
-function checkAns($userName, $trueAns)
+function checkAns($userName, string $trueAns)
 {
     $userAns = readline("Your answer: ");
     if ($userAns === $trueAns) {
