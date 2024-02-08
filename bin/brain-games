@@ -2,9 +2,5 @@
 
 <?php
 
-require_once "/home/maid/project-1/bin/brain-even";
-require_once "/home/maid/project-1/src/Cli.php"; 
-require_once "/home/maid/project-1/vendor/autoload.php";//загружается только локальная автозагрузка
 print_r("Welcome to the Brain Games!\n");
 $userName = \Project1\Cli\userName();
-//\Project1\Brain\Even\isEven($userName);/
