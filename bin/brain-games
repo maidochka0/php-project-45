@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-require_once("{__DIR__}/../src/Cli.php");
+require_once __DIR__ . '/../vendor/autoload.php';
 
 print_r("Welcome to the Brain Games!\n");
 $userName = \Project1\Cli\userName();
