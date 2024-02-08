@@ -1,7 +1,7 @@
 <?php
 namespace Project1\Cli;
 
-require_once "vendor/autoload.php"; //загружается только локальная автозагрузка
+require_once "{__DIR__}/../vendor/autoload.php"; //загружается только локальная автозагрузка
 
 use function cli\line;
 use function cli\prompt;
