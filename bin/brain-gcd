@@ -15,7 +15,7 @@ function nod($numb1, $numb2)
     return $a;
 }
 
-\project1\Cli\welcome();
+\Project1\Engine\welcome();
 $userName = \Project1\Cli\userName();
 print_r("Find the greatest common divisor of given numbers.\n");
 $countTrueAns = 0;

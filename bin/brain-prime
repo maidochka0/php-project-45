@@ -12,7 +12,7 @@ for ($i = 2, $len = count($list); $i < $len; $i++) {
     }
 }
 
-\project1\Cli\welcome();
+\Project1\Engine\welcome();
 $userName = \Project1\Cli\userName();
 echo 'Answer "yes" if given number is prime. Otherwise answer "no".';
 echo "\n";

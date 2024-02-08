@@ -2,6 +2,10 @@
 
 namespace Project1\Engine;
 
+function welcome()
+{
+    print_r("Welcome to the Brain Games!\n");
+}
 function checkAns($userName, string $trueAns)
 {
     $userAns = readline("Your answer: ");
@@ -13,4 +17,8 @@ function checkAns($userName, string $trueAns)
         print_r("Let's try again, {$userName}!\n");                  
         return false;
     }
+}
+function congratulations($userName)
+{
+    print_r("Congratulations, {$userName}!\n");
 }
