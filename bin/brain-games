@@ -2,5 +2,7 @@
 
 <?php
 
+require_once "vendor/autoload.php";
+
 print_r("Welcome to the Brain Games!\n");
 $userName = \Project1\Cli\userName();
