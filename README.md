@@ -5,3 +5,4 @@
 <a href="https://asciinema.org/a/dYvZKkA911asEM6l9WrhEbjZo">калькулятор</a>
 <a href="https://asciinema.org/a/9err8B6aMwfHfiprlBPiw4HFZ">нод</a>
 <a href="https://asciinema.org/a/xvDAoCVocWSKZsxAe4IBn7Npy">прогрессив</a>
+<a href="https://asciinema.org/a/CxB3azJTlQZZHnYtKw4cgFmiX">простые_числа</a>
