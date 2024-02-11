@@ -15,7 +15,7 @@ function checkAns($userName, string $trueAns)
         print_r("Correct!\n");
         return true;
     } else {
-        print_r("'{$userAns}' is wrong answer ;(. Correct answer was '{$trueAns}'\n");
+        print_r("'{$userAns}' is wrong answer ;(. Correct answer was '{$trueAns}'.\n");
         print_r("Let's try again, {$userName}!\n");                  
         return false;
     }
