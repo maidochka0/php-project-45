@@ -2,6 +2,8 @@
 
 namespace Project1\Engine;
 
+require_once __DIR__ . "/Cli.php";
+
 function welcome()
 {
     print_r("Welcome to the Brain Games!\n");
