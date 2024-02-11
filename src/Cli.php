@@ -9,11 +9,11 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function cli\line;
-use function cli\prompt;
+//use function cli\line;
+//use function cli\prompt;
 function userName()
 {
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    $name = readline("May I have your name? ");
+    echo "Hello, {$name}!\n";
     return $name;
 }
