@@ -8,13 +8,17 @@
 PHP 8.1.2 
 <br>
 GNU Make 4.3
+<br>
 # установка
 ```make install```
 # запуск
 ## brain-even
 <a href="https://asciinema.org/a/T9sDOs73I7wCltEVb1LJ2feOI"><img src="https://i.imgur.com/MA6hZz1.png" width=40%></a> 
-<br>
-<a href="https://asciinema.org/a/dYvZKkA911asEM6l9WrhEbjZo">калькулятор</a>
-<a href="https://asciinema.org/a/9err8B6aMwfHfiprlBPiw4HFZ">нод</a>
-<a href="https://asciinema.org/a/xvDAoCVocWSKZsxAe4IBn7Npy">прогрессив</a>
-<a href="https://asciinema.org/a/CxB3azJTlQZZHnYtKw4cgFmiX">простые_числа</a>
+## brain-calc
+<a href="https://asciinema.org/a/dYvZKkA911asEM6l9WrhEbjZo"><img src="https://i.imgur.com/81ddWvX.png"></a>
+## brain-gcd
+<a href="https://asciinema.org/a/9err8B6aMwfHfiprlBPiw4HFZ"><img src="https://i.imgur.com/zJA6CfH.png"></a>
+## brain-progression
+<a href="https://asciinema.org/a/xvDAoCVocWSKZsxAe4IBn7Npy"><img src="https://i.imgur.com/kfY4xMv.png"></a>
+## brain-prime
+<a href="https://asciinema.org/a/CxB3azJTlQZZHnYtKw4cgFmiX"><img src="https://i.imgur.com/h1ZbbjN.png"></a>
