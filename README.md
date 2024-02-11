@@ -10,7 +10,10 @@ PHP 8.1.2
 GNU Make 4.3
 <br>
 # установка
-```make install```
+```
+git clone https://github.com/maidochka0/php-project-45.git
+make install
+```
 # запуск
 ## brain-even
 <a href="https://asciinema.org/a/T9sDOs73I7wCltEVb1LJ2feOI"><img src="https://i.imgur.com/MA6hZz1.png" width=40%></a> 
