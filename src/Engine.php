@@ -22,5 +22,5 @@ function checkAns($userName, string $trueAns)
 }
 function congratulations($userName)
 {
-    print_r("Congratulations, {$userName}!\n");
+    echo "Congratulations, {$userName}!\n";
 }

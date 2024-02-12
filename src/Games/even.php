@@ -13,7 +13,7 @@ function even()
     echo "\n";
     $countTrueAns = 0;
     $ansLimit = 3;
-    while ($countTrueAns < $ansLimit) {
+    while ($countTrueAns < $ansLimit && $countTrueAns !== null) {
         $questNumb = rand(0, 100);
         if ($questNumb % 2 === 0) {
             $questAns = "yes";
@@ -21,7 +21,7 @@ function even()
             $questAns = "no";
         }
         print_r("Question: {$questNumb}\n");
-        $countTrueAns = \Project1\Engine\checkAns($userName, $questAns) ? $countTrueAns + 1 : 0;
+        $countTrueAns = \Project1\Engine\checkAns($userName, $questAns) ? $countTrueAns + 1 : null;
     }
-    \Project1\Engine\congratulations($userName);
-    }
+    if ($countTrueAns === $ansLimit) \Project1\Engine\congratulations($userName);
+    } 

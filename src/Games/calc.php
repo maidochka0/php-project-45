@@ -12,7 +12,7 @@ function calc()
     print_r("What is the result of the expression?\n");
     $countTrueAns = 0;
     $ansLimit = 3;
-    while ($countTrueAns < $ansLimit)
+    while ($countTrueAns < $ansLimit && $countTrueAns !== null)
     {
         $op1 = rand(0,9);
         $op2 = rand(0,9);
@@ -32,5 +32,5 @@ function calc()
         print_r("Question: {$quest}\n");
         $countTrueAns = \Project1\Engine\checkAns($userName, $trueAns) ? $countTrueAns + 1 : 0;
     }
-    print_r("Congratulations, {$userName}!\n");
+    if ($countTrueAns === $ansLimit) \Project1\Engine\congratulations($userName);
 }

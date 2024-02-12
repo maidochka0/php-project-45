@@ -24,14 +24,15 @@ function prime()
     $len = count($primeList);
     $countTrueAns = 0;
     $ansLimit = 3;
-    while ($countTrueAns < $ansLimit) {
+    while ($countTrueAns < $ansLimit &&  $countTrueAns !== null) {
         $ansIndex = rand(0, $len - 1);
         if (rand(0,1) === 1) $questNumb = $primeList[$ansIndex];
         else $questNumb = rand(1, 100);
         echo "Question: {$questNumb}\n";
         if (in_array($questNumb, $primeList)) $questAns = 'yes';
         else $questAns = 'no';
-        $countTrueAns = \Project1\Engine\checkAns($userName, $questAns) ? $countTrueAns + 1 : 0;
+        $countTrueAns = \Project1\Engine\checkAns($userName, $questAns) ? $countTrueAns + 1 : null;
     }
-    echo "Congratulations, {$userName}!\n";
+
+    if ($countTrueAns === $ansLimit) \Project1\Engine\congratulations($userName);
 }

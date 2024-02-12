@@ -13,7 +13,7 @@ function progression()
     $countTrueAns = 0;
     $ansLimit = 3;
     $lenList = 5;
-    while ($countTrueAns < $ansLimit) {
+    while ($countTrueAns < $ansLimit &&  $countTrueAns !== null) {
         $step = rand(1,10);
         $list =[rand(0,10)];
         for ($i = 1, $next = $list[0] + $step; $i < $lenList; $i++) {
@@ -29,7 +29,7 @@ function progression()
             echo " {$i}";
         }
         echo "\n";
-        $countTrueAns = \Project1\Engine\checkAns($userName, $questAns) ? $countTrueAns + 1 : 0;
+        $countTrueAns = \Project1\Engine\checkAns($userName, $questAns) ? $countTrueAns + 1 : null;
     }
-    echo "Congratulations, {$userName}!\n";
+    if ($countTrueAns === $ansLimit) \Project1\Engine\congratulations($userName);
 }
