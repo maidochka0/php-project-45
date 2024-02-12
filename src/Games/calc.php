@@ -21,16 +21,19 @@ function calc()
         switch (rand(0,2)) {
             case 0:
                 $trueAns = $op1 + $op2;
-                $quest = $op1 . '+' . $op2;
+                $quest = "{$op1} + {$op2}";
+                break;
             case 1:
                 $trueAns = $op1 - $op2;
-                $quest = $op1 . '-' . $op2;
+                $quest = "{$op1} - {$op2}";
+                break;
             case 2:
                 $trueAns = $op1 * $op2;
-                $quest = $op1 . '*' . $op2;
+                $quest = "{$op1} * {$op2}";
+                break;
         }
         print_r("Question: {$quest}\n");
-        $countTrueAns = \Project1\Engine\checkAns($userName, $trueAns) ? $countTrueAns + 1 : 0;
+        $countTrueAns = \Project1\Engine\checkAns($userName, $trueAns) ? $countTrueAns + 1 : null;
     }
     if ($countTrueAns === $ansLimit) \Project1\Engine\congratulations($userName);
 }
