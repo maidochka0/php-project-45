@@ -1,5 +1,3 @@
-<?php
-
 namespace Project1\Games\Calc;
 
 require_once __DIR__ . "/../Cli.php";
@@ -32,7 +30,7 @@ function calc()
                 break;
         }
         echo "Question: {$quest}\n";
-        $countTrueAns = \Project1\Engine\checkAns($userName, $trueAns) ? $countTrueAns + 1 : null;
+        $countTrueAns = \Project1\Engine\checkAns($userName, (string)$trueAns) ? $countTrueAns + 1 : null;
     }
     if ($countTrueAns === $ansLimit) {
         \Project1\Engine\congratulations($userName);

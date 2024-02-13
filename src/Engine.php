@@ -8,7 +8,8 @@ function welcome()
 {
     print_r("Welcome to the Brain Games!\n");
 }
-function checkAns($userName, string $trueAns)
+
+function checkAns(string $userName, string $trueAns)
 {
     $userAns = readline("Your answer: ");
     if ($userAns === $trueAns) {
@@ -20,7 +21,8 @@ function checkAns($userName, string $trueAns)
         return false;
     }
 }
-function congratulations($userName)
+
+function congratulations(string $userName)
 {
     echo "Congratulations, {$userName}!\n";
 }
