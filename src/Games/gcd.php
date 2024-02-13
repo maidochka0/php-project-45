@@ -29,7 +29,7 @@ function gcd()
         $questNumb2 = rand(10, 100);
         $questAns = nod($questNumb1, $questNumb2);
         echo "Question: {$questNumb1} {$questNumb2}\n";
-        $countTrueAns = \Project1\Engine\checkAns($userName, $questAns) ? $countTrueAns + 1 : null;
+        $countTrueAns = \Project1\Engine\checkAns($userName, (string)$questAns) ? $countTrueAns + 1 : null;
     }
     if ($countTrueAns === $ansLimit) {
         \Project1\Engine\congratulations($userName);

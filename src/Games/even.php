@@ -21,7 +21,7 @@ function even()
             $questAns = "no";
         }
         echo "Question: {$questNumb}\n";
-        $countTrueAns = \Project1\Engine\checkAns($userName, $questAns) ? $countTrueAns + 1 : null;
+        $countTrueAns = \Project1\Engine\checkAns($userName, (string)$questAns) ? $countTrueAns + 1 : null;
     }
     if ($countTrueAns === $ansLimit) {
         \Project1\Engine\congratulations($userName);

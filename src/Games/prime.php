@@ -34,12 +34,12 @@ function prime()
             $questNumb = rand(1, 100);
         }
         echo "Question: {$questNumb}\n";
-        if (in_array((int)$questNumb, $primeList, true)) {
+        if (in_array($questNumb, $primeList, true)) {
             $questAns = 'yes';
         } else {
             $questAns = 'no';
         }
-        $countTrueAns = \Project1\Engine\checkAns($userName, $questAns) ? $countTrueAns + 1 : null;
+        $countTrueAns = \Project1\Engine\checkAns($userName, (string)$questAns) ? $countTrueAns + 1 : null;
     }
 
     if ($countTrueAns === $ansLimit) {
