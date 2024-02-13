@@ -34,7 +34,7 @@ function prime()
             $questNumb = rand(1, 100);
         }
         echo "Question: {$questNumb}\n";
-        if (in_array((int)$questNumb,$primeList, true)) {
+        if (in_array((int)$questNumb, $primeList, true)) {
             $questAns = 'yes';
         } else {
             $questAns = 'no';

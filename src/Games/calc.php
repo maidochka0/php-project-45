@@ -1,3 +1,5 @@
+<?php
+
 namespace Project1\Games\Calc;
 
 require_once __DIR__ . "/../Cli.php";
