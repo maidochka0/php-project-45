@@ -7,10 +7,12 @@ require_once __DIR__ . "/../Engine.php";
 
 function prime()
 {
-    $list = range(0,100);
+    $list = range(0, 100);
     $primeList = [1];
     for ($i = 2, $len = count($list); $i < $len; $i++) {
-        if ($list[$i] === null) continue;
+        if ($list[$i] === null) {
+            continue;
+        }
         $primeList[] = $i;
         for ($j = $i; $j < $len; $j += $i) {
             $list[$j] = null;
@@ -24,15 +26,23 @@ function prime()
     $len = count($primeList);
     $countTrueAns = 0;
     $ansLimit = 3;
-    while ($countTrueAns < $ansLimit &&  $countTrueAns !== null) {
+    while ($countTrueAns < $ansLimit && $countTrueAns !== null) {
         $ansIndex = rand(0, $len - 1);
-        if (rand(0,1) === 1) $questNumb = $primeList[$ansIndex];
-        else $questNumb = rand(1, 100);
+        if (rand(0, 1) === 1) {
+            $questNumb = $primeList[$ansIndex];
+        } else {
+            $questNumb = rand(1, 100);
+        }
         echo "Question: {$questNumb}\n";
-        if (in_array($questNumb, $primeList)) $questAns = 'yes';
-        else $questAns = 'no';
+        if (in_array($questNumb, $primeList)) {
+            $questAns = 'yes';
+        } else {
+            $questAns = 'no';
+        }
         $countTrueAns = \Project1\Engine\checkAns($userName, $questAns) ? $countTrueAns + 1 : null;
     }
 
-    if ($countTrueAns === $ansLimit) \Project1\Engine\congratulations($userName);
+    if ($countTrueAns === $ansLimit) {
+        \Project1\Engine\congratulations($userName);
+    }
 }

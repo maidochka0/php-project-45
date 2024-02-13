@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Project1\Engine;
 
@@ -16,7 +16,7 @@ function checkAns($userName, string $trueAns)
         return true;
     } else {
         print_r("'{$userAns}' is wrong answer ;(. Correct answer was '{$trueAns}'.\n");
-        print_r("Let's try again, {$userName}!\n");                  
+        print_r("Let's try again, {$userName}!\n");
         return false;
     }
 }
