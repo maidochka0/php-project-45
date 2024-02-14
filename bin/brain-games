@@ -10,4 +10,4 @@ if (file_exists($autoloadPath1)) {
 }
 
 \Project1\Engine\welcome();
-$userName = \Project1\Cli\userName();
+$userName = \Project1\Cli\getUserName();

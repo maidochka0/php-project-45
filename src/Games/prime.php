@@ -20,13 +20,13 @@ function prime()
     }
 
     \Project1\Engine\welcome();
-    $userName = \Project1\Cli\userName();
+    $userName = \Project1\Cli\getUserName();
     echo 'Answer "yes" if given number is prime. Otherwise answer "no".';
     echo "\n";
     $len = count($primeList);
     $countTrueAns = 0;
-    $ansLimit = 3;
-    while ($countTrueAns < $ansLimit && $countTrueAns !== null) {
+    $answersLimit = 3;
+    while ($countTrueAns < $answersLimit && $countTrueAns !== null) {
         $ansIndex = rand(0, $len - 1);
         if (rand(0, 1) === 1) {
             $questNumb = $primeList[$ansIndex];
@@ -39,10 +39,10 @@ function prime()
         } else {
             $questAns = 'no';
         }
-        $countTrueAns = \Project1\Engine\checkAns($userName, $questAns) ? $countTrueAns + 1 : null;
+        $countTrueAns = \Project1\Engine\userCanQuestAns($userName, $questAns) ? $countTrueAns + 1 : null;
     }
 
-    if ($countTrueAns === $ansLimit) {
+    if ($countTrueAns === $answersLimit) {
         \Project1\Engine\congratulations($userName);
     }
 }

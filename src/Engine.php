@@ -9,7 +9,7 @@ function welcome()
     print_r("Welcome to the Brain Games!\n");
 }
 
-function checkAns(string $userName, string $trueAns)
+function userCanQuestAns(string $userName, string $trueAns)
 {
     $userAns = readline("Your answer: ");
     if ($userAns === $trueAns) {

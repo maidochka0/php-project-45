@@ -8,12 +8,12 @@ require_once __DIR__ . "/../Engine.php";
 function even()
 {
     \Project1\Engine\welcome();
-    $userName = \Project1\Cli\userName();
+    $userName = \Project1\Cli\getUserName();
     echo 'Answer "yes" if the number is even, otherwise answer "no".';
     echo "\n";
     $countTrueAns = 0;
-    $ansLimit = 3;
-    while ($countTrueAns < $ansLimit && $countTrueAns !== null) {
+    $answersLimit = 3;
+    while ($countTrueAns < $answersLimit && $countTrueAns !== null) {
         $questNumb = rand(0, 100);
         if ($questNumb % 2 === 0) {
             $questAns = "yes";
@@ -21,9 +21,9 @@ function even()
             $questAns = "no";
         }
         echo "Question: {$questNumb}\n";
-        $countTrueAns = \Project1\Engine\checkAns($userName, $questAns) ? $countTrueAns + 1 : null;
+        $countTrueAns = \Project1\Engine\userCanQuestAns($userName, $questAns) ? $countTrueAns + 1 : null;
     }
-    if ($countTrueAns === $ansLimit) {
+    if ($countTrueAns === $answersLimit) {
         \Project1\Engine\congratulations($userName);
     }
 }
