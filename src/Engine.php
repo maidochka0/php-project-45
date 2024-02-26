@@ -2,8 +2,6 @@
 
 namespace Project1\Engine;
 
-require_once __DIR__ . "/Cli.php";
-
 function welcome()
 {
     print_r("Welcome to the Brain Games!\n");
@@ -25,4 +23,39 @@ function userCanQuestAns(string $userName, string $trueAns)
 function congratulations(string $userName)
 {
     echo "Congratulations, {$userName}!\n";
+}
+
+function roundQuest($str)
+{
+    echo "Question: {$str}\n";
+}
+
+function printQuestList($list)
+{
+    echo "Question:";
+    foreach ($list as $i) {
+        echo " {$i}";
+    }
+    echo "\n";
+}
+
+function calcQuest()
+{
+    echo "What is the result of the expression?\n";
+}
+
+function evenQuest()
+{
+    echo 'Answer "yes" if the number is even, otherwise answer "no".';
+    echo "\n";
+}
+
+function gcdQuest()
+{
+    echo "Find the greatest common divisor of given numbers.\n";
+}
+
+function progressionQuest()
+{
+    echo "What number is missing in the progression?\n";
 }

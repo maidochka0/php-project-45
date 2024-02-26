@@ -2,12 +2,11 @@
 
 namespace Project1\Games\Prime;
 
-require_once __DIR__ . "/../Cli.php";
-require_once __DIR__ . "/../Engine.php";
-
 function prime()
 {
-    $list = range(0, 100);
+    $first = 0;
+    $last = 100;
+    $list = range($first, $last);
     $primeList = [1];
     for ($i = 2, $len = count($list); $i < $len; $i++) {
         if ($list[$i] === null) {
@@ -26,14 +25,16 @@ function prime()
     $len = count($primeList);
     $countTrueAns = 0;
     $answersLimit = 3;
+    $first = 1;
+    $last = 100;
     while ($countTrueAns < $answersLimit && $countTrueAns !== null) {
         $ansIndex = rand(0, $len - 1);
         if (rand(0, 1) === 1) {
             $questNumb = $primeList[$ansIndex];
         } else {
-            $questNumb = rand(1, 100);
+            $questNumb = rand($first, $last);
         }
-        echo "Question: {$questNumb}\n";
+        \Project1\Engine\roundQuest($questNumb);
         if (in_array($questNumb, $primeList, true)) {
             $questAns = 'yes';
         } else {

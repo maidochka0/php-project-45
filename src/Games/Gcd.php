@@ -2,9 +2,6 @@
 
 namespace Project1\Games\Gcd;
 
-require_once __DIR__ . "/../Cli.php";
-require_once __DIR__ . "/../Engine.php";
-
 function nod(int $numb1, int $numb2): int
 {
     $a = max($numb1, $numb2);
@@ -21,14 +18,16 @@ function gcd()
 {
     \Project1\Engine\welcome();
     $userName = \Project1\Cli\getUserName();
-    echo "Find the greatest common divisor of given numbers.\n";
+    \Project1\Engine\gcdQuest();
     $countTrueAns = 0;
     $answersLimit = 3;
+    $min = 10;
+    $max = 100;
     while ($countTrueAns < $answersLimit && $countTrueAns !== null) {
-        $questNumb1 = rand(10, 100);
-        $questNumb2 = rand(10, 100);
+        $questNumb1 = rand($min, $max);
+        $questNumb2 = rand($min, $max);
         $questAns = nod($questNumb1, $questNumb2);
-        echo "Question: {$questNumb1} {$questNumb2}\n";
+        \Project1\Engine\roundQuest("{$questNumb1} {$questNumb2}");
         $countTrueAns = \Project1\Engine\userCanQuestAns($userName, (string)$questAns) ? $countTrueAns + 1 : null;
     }
     if ($countTrueAns === $answersLimit) {

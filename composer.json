@@ -5,11 +5,11 @@
         "files": [
             "src/Cli.php",
             "src/Engine.php",
-            "src/Games/even.php",
-            "src/Games/calc.php",
-            "src/Games/gcd.php",
-            "src/Games/progression.php",
-            "src/Games/prime.php"
+            "src/Games/Even.php",
+            "src/Games/Calc.php",
+            "src/Games/Gcd.php",
+            "src/Games/Progression.php",
+            "src/Games/Prime.php"
         ]
     },
     "authors": [
