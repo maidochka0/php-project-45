@@ -2,7 +2,7 @@
 
 namespace Project1\Games\Calc;
 
-function calculate(int $operand1,int $operand2,string $operation,int &$trueAns,string &$quest): void
+function calculate(int $operand1, int $operand2, string $operation, int &$trueAns, string &$quest): void
 {
     switch ($operation) {
         case '+':
