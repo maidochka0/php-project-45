@@ -22,7 +22,7 @@ function even()
     while ($countTrueAns < $answersLimit && $countTrueAns !== null) {
         $questNumb = rand(0, $rangeLen);
         $questAns = isEven($questNumb) ? 'yes' : 'no';
-        \Project1\Engine\roundQuest($questNumb);
+        \Project1\Engine\roundQuest((string)$questNumb);
         $countTrueAns = \Project1\Engine\userCanQuestAns($userName, $questAns) ? $countTrueAns + 1 : null;
     }
     if ($countTrueAns === $answersLimit) {

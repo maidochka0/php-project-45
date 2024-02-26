@@ -34,7 +34,7 @@ function prime()
         } else {
             $questNumb = rand($first, $last);
         }
-        \Project1\Engine\roundQuest($questNumb);
+        \Project1\Engine\roundQuest((string)$questNumb);
         if (in_array($questNumb, $primeList, true)) {
             $questAns = 'yes';
         } else {
