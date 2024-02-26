@@ -25,12 +25,12 @@ function congratulations(string $userName)
     echo "Congratulations, {$userName}!\n";
 }
 
-function roundQuest($str)
+function roundQuest(string $str)
 {
     echo "Question: {$str}\n";
 }
 
-function printQuestList($list)
+function printQuestList(array $list)
 {
     echo "Question:";
     foreach ($list as $i) {

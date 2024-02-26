@@ -2,7 +2,7 @@
 
 namespace Project1\Games\Even;
 
-function isEven(int $questNumb): string
+function isEven(int $questNumb): bool
 {
     if ($questNumb % 2 === 0) {
         return true;
